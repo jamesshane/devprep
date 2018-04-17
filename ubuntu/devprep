@@ -1,0 +1,17 @@
+#!/bin/sh
+sudo apt update -y
+sudo apt upgrade -y
+sudo apt install gdm gnome-terminal chromium-browser nautilus wireless-tools tea -y
+
+#dev
+sudo apt install wget curl -y
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+sudo apt-get install apt-transport-https
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+sudo add-apt-repository ppa:webupd8team/atom -y
+sudo apt update -y
+sudo apt install zsh build-essential atom tmux terminator mc thunar sublime-text -y
+
+#protect
+sudo apt install tree -y
+

@@ -1,0 +1,16 @@
+!#/bin/sh
+#useradd -m -d /home/v v
+#passwd v
+
+sudo pacman -S xorg xorg-xinit i3 xterm terminator firefox dmenu git base-devel zsh sudo wget curl thunar atom openssh tmux
+
+#visudo
+
+echo "exec i3" >> /home/v/.xinitrc
+
+#chown v:v /home/v/.xinitrc
+
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+
+
+
