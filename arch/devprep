@@ -44,4 +44,5 @@ if [ "$1" == "fixclock" ]; then
 	sudo pacman -S ntp
 	ntpd -qg
 	sudo systemctl enable ntpd.service
+	sudo systemctl enable ntpd
 fi
