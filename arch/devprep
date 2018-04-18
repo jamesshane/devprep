@@ -33,8 +33,7 @@ fi
 if [ "$1" == "omz" ]; then
 	sudo pacman -S zsh wget
 	sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-	sed -i 's/robbyrussell/rkj-repos/g' ~/.zshrc
-	#sed -i 's/robbyrussell/junkfood/g' ~/.zshrc
+	sed -i 's/robbyrussell/junkfood/g' ~/.zshrc
 fi
 
 if [ "$1" == "dev" ]; then
