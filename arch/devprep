@@ -15,6 +15,9 @@ if [ "$1" == "admin" ]; then
 	pacman -Sy
 	pacman -S sudo openssh
 	visudo
+	cp devprep /home/v/devprep.sh
+	chown v:v /home/v/devprep.sh
+	chmod +x /home/v/devprep.sh
 fi
 
 if [ "$1" == "X" ]; then
