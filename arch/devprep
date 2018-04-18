@@ -1,16 +1,38 @@
-!#/bin/sh
-#useradd -m -d /home/v v
-#passwd v
+#!/bin/bash
 
-sudo pacman -S xorg xorg-xinit i3 xterm terminator firefox dmenu git base-devel zsh sudo wget curl thunar atom openssh tmux
+if [ "$1" == "" ]; then
+echo "archfi admin X i3 omz dev"
+fi
 
-#visudo
+if [ "$1" == "archfi" ]; then
+	wget archfi.sf.net
+	sh archfi
+fi
 
-echo "exec i3" >> /home/v/.xinitrc
+if [ "$1" == "admin" ]; then
+	useradd -m -d /home/v v
+	passwd v
+	sudo pacman -S sudo openssh
+	visudo
+fi
 
-#chown v:v /home/v/.xinitrc
+if [ "$1" == "X" ]; then
+	sudo pacman -S xorg xorg-xinit xterm virtualbox-guest-utils
+fi
 
-sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+if [ "$1" == "i3" ]; then
+	sudo pacman -S i3 terminator firefox dmenu thunar
+	echo "exec i3" > /home/v/.xinitrc
+	chown v:v /home/v/.xinitrc
+fi
 
+if [ "$1" == "omz" ]; then
+	sudo pacman -S zsh wget
+	sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+	sed -i 's/robbyrussell/rkj-repos/g' ~/.zshrc
+	#sed -i 's/robbyrussell/junkfood/g' ~/.zshrc
+fi
 
-
+if [ "$1" == "dev" ]; then
+	sudo pacman -S git base-devel curl atom tmux
+fi
