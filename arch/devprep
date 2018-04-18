@@ -1,18 +1,19 @@
 #!/bin/bash
 
 if [ "$1" == "" ]; then
-echo "archfi admin X i3 omz dev"
+	echo "archfi admin X i3 omz dev"
 fi
 
 if [ "$1" == "archfi" ]; then
-	wget archfi.sf.net
+	wget archfi.sf.net/archfi
 	sh archfi
 fi
 
 if [ "$1" == "admin" ]; then
 	useradd -m -d /home/v v
 	passwd v
-	sudo pacman -S sudo openssh
+	pacman -Sy
+	pacman -S sudo openssh
 	visudo
 fi
 
