@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ "$1" == "" ]; then
-	echo "archfi admin X i3 omz dev fixclock"
+	echo "archfi admin X i3 gnome gdmon omz dev fixclock yaourt"
 fi
 
 if [ "$1" == "archfi" ]; then
@@ -30,7 +30,16 @@ if [ "$1" == "i3" ]; then
 	chown v:v /home/v/.xinitrc
 fi
 
+if [ "$1" == "gnome" ]; then
+	sudo pacman -S gnome
+fi
+
+if [ "$1" == "gdmon" ]; then
+	sudo systemctl enable gdm
+fi
+
 if [ "$1" == "omz" ]; then
+	sudo pacman -S git
 	sudo pacman -S zsh wget
 	sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 	sed -i 's/robbyrussell/junkfood/g' ~/.zshrc
@@ -45,4 +54,15 @@ if [ "$1" == "fixclock" ]; then
 	sudo ntpd -qg
 	sudo systemctl enable ntpd.service
 	sudo systemctl enable ntpd
+fi
+
+if [ "$1" == "yaourt" ]; then
+	git clone https://aur.archlinux.org/package-query.git
+	cd package-query
+	makepkg -si
+	cd ..
+	git clone https://aur.archlinux.org/yaourt.git
+	cd yaourt
+	makepkg -si
+	cd ..
 fi
