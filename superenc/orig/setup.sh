@@ -38,3 +38,5 @@ shred foo2
 shred a.txt
 rm foo*
 rm a.txt
+shred $0
+#rm $0
