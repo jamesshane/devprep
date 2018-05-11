@@ -1,17 +1,50 @@
-#!/bin/sh
+#!/bin/bash
+
+if [ "$1" == "" ]; then
+        echo "update X i3 gnome gdmon omz dev fixclock"
+fi
+
+if [ "$1" == "update" ]; then
 sudo apt update -y
 sudo apt upgrade -y
-sudo apt install gdm gnome-terminal chromium-browser nautilus wireless-tools tea -y
+fi
 
-#dev
-sudo apt install wget curl -y
-wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
-sudo apt-get install apt-transport-https
-echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
-sudo add-apt-repository ppa:webupd8team/atom -y
-sudo apt update -y
-sudo apt install zsh build-essential atom tmux terminator mc thunar sublime-text -y
+if [ "$1" == "X" ]; then
+        sudo apt install xorg xinit xterm virtualbox-guest-utils -y
+fi
 
-#protect
-sudo apt install tree -y
+if [ "$1" == "i3" ]; then
+        apt install i3 terminator firefox dmenu thunar -y
+        echo "exec i3" > /home/v/.xinitrc
+        chown v:v /home/v/.xinitrc
+fi
+
+if [ "$1" == "gnome" ]; then
+	sudo apt install gdm3 gnome-terminal -y
+fi
+
+if [ "$1" == "gdmon" ]; then
+	sudo systemctl enable gdm
+fi
+
+if [ "$1" == "omz" ]; then
+        sudo apt install git -y
+        sudo apt install zsh wget -y
+        sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+        sed -i 's/robbyrussell/junkfood/g' ~/.zshrc
+fi
+
+if [ "$1" == "dev" ]; then
+	sudo add-apt-repository ppa:webupd8team/atom -y
+	sudo apt update -y
+        sudo apt install git build-essential curl atom tmux -y
+fi
+
+if [ "$1" == "fixclock" ]; then
+        sudo apt install ntp -y
+        sudo ntpd -qg
+        sudo systemctl enable ntpd.service
+        sudo systemctl enable ntpd
+fi
+
 
