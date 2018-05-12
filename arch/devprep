@@ -1,7 +1,11 @@
 #!/bin/bash
 
 if [ "$1" == "" ]; then
-	echo "archfi admin X i3 gnome gdmon omz dev fixclock yaourt"
+	echo "update archfi admin X i3 gnome gdmon omz dev fixclock yaourt"
+fi
+
+if [ "$1" == "update" ]; then
+	sudo pacman -Syy
 fi
 
 if [ "$1" == "archfi" ]; then
