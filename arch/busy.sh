@@ -1,6 +1,6 @@
 #!/bin/env sh
 
-sudo pacman -S tcdump ccze dialog
+sudo pacman -S tcpdump ccze dialog
 
 busytxt='rnd_file=$(find /usr/include -type f -size +5k | sort -R | head -n 1) && vi +$((RANDOM%$(wc -l $rnd_file | cut -f1 -d" "))) $rnd_file'
 echo "alias busy1='$busytxt'" >> $HOME/.zshrc
