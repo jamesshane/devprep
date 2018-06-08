@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ "$1" == "" ]; then
-        echo "update Xadmin i3 gnome gdmon omz dev fixclock"
+        echo "update admin X i3 gnome gdmon omz dev fixclock"
 fi
 
 if [ "$1" == "update" ]; then
@@ -30,8 +30,8 @@ fi
 
 if [ "$1" == "gdmon" ]; then
 	#fix
-	echo "don't need this... it's on"
-	#sudo systemctl enable gdm
+	#echo "don't need this... it's on"
+	sudo systemctl enable gdm
 fi
 
 if [ "$1" == "omz" ]; then
@@ -52,9 +52,9 @@ fi
 
 if [ "$1" == "fixclock" ]; then
 	#fix
-	echo "don't need this... it's on, if clock is wrong, correct the /etc/localtime and reboot"
-        #sudo apt install ntp -y
-        #sudo ntpd -qg
-        #sudo systemctl enable ntpd.service
-        #sudo systemctl enable ntpd
+	#echo "don't need this... it's on, if clock is wrong, correct the /etc/localtime and reboot"
+        sudo apt install ntp -y
+        sudo ntpd -qg
+        sudo systemctl enable ntpd.service
+        sudo systemctl enable ntpd
 fi
