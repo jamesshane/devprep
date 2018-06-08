@@ -30,8 +30,8 @@ fi
 
 if [ "$1" == "gdmon" ]; then
 	#fix
-	#echo "don't need this... it's on"
-	sudo systemctl enable gdm
+	echo "don't need this... it's on"
+	#sudo systemctl enable gdm
 fi
 
 if [ "$1" == "omz" ]; then
@@ -45,16 +45,16 @@ if [ "$1" == "dev" ]; then
   sudo apt install wget -y
   wget https://atom.io/download/deb
   sudo dpkg -i atom-amd64.deb
-  sudo apt install -f
+  sudo apt -y install -f
 	sudo apt update -y
         sudo apt install git build-essential curl tmux -y
 fi
 
 if [ "$1" == "fixclock" ]; then
 	#fix
-	#echo "don't need this... it's on, if clock is wrong, correct the /etc/localtime and reboot"
-        sudo apt install ntp -y
-        sudo ntpd -qg
-        sudo systemctl enable ntpd.service
-        sudo systemctl enable ntpd
+	echo "don't need this... it's on, if clock is wrong, correct the /etc/localtime and reboot"
+        #sudo apt install ntp -y
+        #sudo ntpd -qg
+        #sudo systemctl enable ntpd.service
+        #sudo systemctl enable ntpd
 fi
