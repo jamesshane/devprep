@@ -61,6 +61,8 @@ if [ "$1" == "fixclock" ]; then
 fi
 
 if [ "$1" == "virtualbox-guest" ]; then
+  sudo apt install build-essential module-assistant dkms
+  sudo m-a prepare
   echo "Do this as root: echo \"deb http://ftp.debian.org/debian jessie-backports main contrib\" >> /etc/apt/sources.list"
   echo "[then hit ENTER]"
   read kfkfkf
