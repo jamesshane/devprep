@@ -46,6 +46,7 @@ if [ "$1" == "dev" ]; then
   wget https://atom.io/download/deb
   sudo dpkg -i atom-amd64.deb
   sudo apt -y install -f
+  rm deb
 	sudo apt update -y
         sudo apt install git build-essential curl tmux -y
 fi
