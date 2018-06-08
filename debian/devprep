@@ -10,7 +10,7 @@ if [ "$1" == "update" ]; then
 fi
 
 if [ "$1" == "admin" ]; then
-	apt install vi sudo -y
+	apt install vim sudo -y
   visudo
 fi
 
