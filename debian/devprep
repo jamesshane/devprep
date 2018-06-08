@@ -1,12 +1,17 @@
 #!/bin/bash
 
 if [ "$1" == "" ]; then
-        echo "update X i3 gnome gdmon omz dev fixclock"
+        echo "update Xadmin i3 gnome gdmon omz dev fixclock"
 fi
 
 if [ "$1" == "update" ]; then
 	sudo apt update -y
 	sudo apt upgrade -y
+fi
+
+if [ "$1" == "admin" ]; then
+	apt install vi sudo -y
+  visudo
 fi
 
 if [ "$1" == "X" ]; then
