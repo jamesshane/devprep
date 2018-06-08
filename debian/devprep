@@ -61,7 +61,7 @@ if [ "$1" == "fixclock" ]; then
 fi
 
 if [ "$1" == "virtualbox-guest" ]; then
-  sudo echo "deb http://ftp.debian.org/debian jessie-backports main contrib" >> /etc/apt/sources.list
+  sh -c '$(sudo echo "deb http://ftp.debian.org/debian jessie-backports main contrib" >> /etc/apt/sources.list)'
   sudo apt update
   sudo apt-get -t jessie-backports install virtualbox-guest-utils
 fi
