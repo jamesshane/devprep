@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ "$1" == "" ]; then
-        echo "update admin X i3 gnome gdmon omz dev fixclock virtualbox-guest"
+        echo "admin update X i3 gnome gdmon omz dev fixclock virtualbox-guest"
 fi
 
 if [ "$1" == "update" ]; then
@@ -12,8 +12,8 @@ fi
 if [ "$1" == "admin" ]; then
 	apt install vim sudo -y
   visudo
-  cp devprep /home/v/devprep
-  chown v:v /home/v/devprep
+  cp devprep /home/v/devprep.sh
+  chown v:v /home/v/devprep.sh
 fi
 
 if [ "$1" == "X" ]; then
@@ -69,5 +69,5 @@ if [ "$1" == "virtualbox-guest" ]; then
   echo "[then hit ENTER]"
   read kfkfkf
   sudo apt update
-  sudo apt-get -t jessie-backports install virtualbox-guest-utils
+  sudo apt-get -t jessie-backports install virtualbox-guest-utils -y
 fi
