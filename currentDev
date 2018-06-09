@@ -1,5 +1,12 @@
+sudo apt install git -y
+sudo pacman -Syy
+sudo pacman -S git
+
 mkdir projects
 cd projects
+
 git clone https://github.com/jamesshane/devprep
 git clone https://github.com/jamesshane/i3wm-themer
 git clone https://github.com/jamesshane/i3groove
+cd i3groove
+git checkout --track origin/working
