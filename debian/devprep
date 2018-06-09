@@ -44,7 +44,7 @@ fi
 if [ "$1" == "dev" ]; then
   sudo apt install wget -y
   wget https://atom.io/download/deb
-  sudo dpkg -i atom-amd64.deb
+  sudo dpkg -i deb
   sudo apt -y install -f
   rm deb
 	sudo apt update -y
