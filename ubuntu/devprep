@@ -1,7 +1,12 @@
 #!/bin/bash
 
 if [ "$1" == "" ]; then
-        echo "update X i3 gnome gdmon omz dev fixclock"
+        echo "admin update X i3 gnome gdmon omz dev fixclock"
+fi
+
+if [ "$1" == "admin" ]; then
+  cp devprep /home/v/devprep.sh
+  chown v:v /home/v/devprep.sh
 fi
 
 if [ "$1" == "update" ]; then
@@ -50,5 +55,3 @@ if [ "$1" == "fixclock" ]; then
         #sudo systemctl enable ntpd.service
         #sudo systemctl enable ntpd
 fi
-
-
