@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ "$1" == "" ]; then
-        echo "admin update X i3 gnome gdmon omz dev fixclock virtualbox-guest"
+        echo "admin update X i3 gnome gdmon omz dev fixclock virtualbox-guest neofetch"
 fi
 
 if [ "$1" == "update" ]; then
@@ -70,4 +70,10 @@ if [ "$1" == "virtualbox-guest" ]; then
   read kfkfkf
   sudo apt update
   sudo apt-get -t jessie-backports install virtualbox-guest-utils -y
+fi
+
+if [ "$1" == "neofetch" ]; then
+	sudo add-apt-repository ppa:dawidd0811/neofetch-daily
+  sudo apt update
+  sudo apt install neofetch
 fi

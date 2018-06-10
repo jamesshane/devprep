@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ "$1" == "" ]; then
-	echo "update archfi admin X i3 gnome gdmon omz dev fixclock yaourt"
+	echo "update archfi admin X i3 gnome gdmon omz dev fixclock yaourt neofetch"
 fi
 
 if [ "$1" == "update" ]; then
@@ -69,4 +69,8 @@ if [ "$1" == "yaourt" ]; then
 	cd yaourt
 	makepkg -si
 	cd ..
+fi
+
+if [ "$1" == "neofetch" ]; then
+	sudo pacman -S neofetch
 fi

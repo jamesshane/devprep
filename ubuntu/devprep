@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ "$1" == "" ]; then
-        echo "admin update X i3 gnome gdmon omz dev fixclock"
+        echo "admin update X i3 gnome gdmon omz dev fixclock neofetch"
 fi
 
 if [ "$1" == "admin" ]; then
@@ -54,4 +54,10 @@ if [ "$1" == "fixclock" ]; then
         #sudo ntpd -qg
         #sudo systemctl enable ntpd.service
         #sudo systemctl enable ntpd
+fi
+
+if [ "$1" == "neofetch" ]; then
+	sudo add-apt-repository ppa:dawidd0811/neofetch-daily
+  sudo apt update
+  sudo apt install neofetch
 fi
