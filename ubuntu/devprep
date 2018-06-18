@@ -65,4 +65,12 @@ fi
 
 if [ "$1" == "full" ]; then
   ./devprep update
+  ./devprep X
+  ./devprep i3
+  ./devprep omz
+  ./devprep dev
+  ./neofetch
+  git clone https://github.com/jamesshane/i3groove
+  cd i3groove
+  ./install_requirements_ubuntu.sh
 fi
