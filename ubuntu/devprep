@@ -62,3 +62,7 @@ if [ "$1" == "neofetch" ]; then
   sudo apt install neofetch
 	echo "neofetch" >> ~/.zshrc
 fi
+
+if [ "$1" == "full" ]; then
+  ./devprep update
+fi
