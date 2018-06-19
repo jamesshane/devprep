@@ -88,7 +88,7 @@ if [ "$1" == "min" ]; then
   ./devprep.sh neofetch
   git clone https://github.com/jamesshane/i3groove
   cd i3groove
-  ./install_requirements_ubuntu.sh
+  ./install_requirements_debian.sh
 fi
 
 if [ "$1" == "full" ]; then
@@ -101,5 +101,5 @@ if [ "$1" == "full" ]; then
   ./devprep.sh neofetch
   git clone https://github.com/jamesshane/i3groove
   cd i3groove
-  ./install_requirements_ubuntu.sh
+  ./install_requirements_debian.sh
 fi
