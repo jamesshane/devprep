@@ -63,13 +63,28 @@ if [ "$1" == "neofetch" ]; then
 	echo "neofetch" >> ~/.zshrc
 fi
 
+if [ "$1" == "min" ]; then
+  ./devprep admin
+  ./devprep.sh update
+  ./devprep.sh X
+  ./devprep.sh i3
+  ./devprep.sh omz
+  ./devprep.sh dev
+  ./devprep.sh neofetch
+  git clone https://github.com/jamesshane/i3groove
+  cd i3groove
+  ./install_requirements_ubuntu.sh
+fi
+
 if [ "$1" == "full" ]; then
-  ./devprep update
-  ./devprep X
-  ./devprep i3
-  ./devprep omz
-  ./devprep dev
-  ./neofetch
+  ./devprep admin
+  ./devprep.sh update
+  ./devprep.sh X
+  ./devprep.sh i3
+  ./devprep.sh gnome
+  ./devprep.sh omz
+  ./devprep.sh dev
+  ./devprep.sh neofetch
   git clone https://github.com/jamesshane/i3groove
   cd i3groove
   ./install_requirements_ubuntu.sh
