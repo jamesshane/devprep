@@ -86,8 +86,13 @@ if [ "$1" == "min" ]; then
   ./devprep.sh omz
   ./devprep.sh dev
   ./devprep.sh neofetch
-  git clone https://github.com/jamesshane/i3groove
-  cd i3groove
+  wget https://jamesshane.github.io/devprep/currentDev
+  chmod +x currentDev
+  wget https://jamesshane.github.io/devprep/gitprepGlobal
+  chmod +x gitprepGlobal
+  ./gitprepGlobal
+  ./currentDev
+  cd projects/i3groove
   ./install_requirements_debian.sh
 fi
 
@@ -99,7 +104,12 @@ if [ "$1" == "full" ]; then
   ./devprep.sh omz
   ./devprep.sh dev
   ./devprep.sh neofetch
-  git clone https://github.com/jamesshane/i3groove
-  cd i3groove
+  wget https://jamesshane.github.io/devprep/currentDev
+  chmod +x currentDev
+  wget https://jamesshane.github.io/devprep/gitprepGlobal
+  chmod +x gitprepGlobal
+  ./gitprepGlobal
+  ./currentDev
+  cd projects/i3groove
   ./install_requirements_debian.sh
 fi
