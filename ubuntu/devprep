@@ -77,8 +77,10 @@ if [ "$1" == "min" ]; then
   chmod +x gitprepGlobal
   ./gitprepGlobal
   ./currentDev
-  cd projects/i3groove
+  cd ~/projects/i3groove
   ./install_requirements_ubuntu.sh
+  cd ~/projects/JamesLinuxDevSetup
+  ./MakeItSo.sh -v
 fi
 
 if [ "$1" == "full" ]; then
@@ -96,6 +98,8 @@ if [ "$1" == "full" ]; then
   chmod +x gitprepGlobal
   ./gitprepGlobal
   ./currentDev
-  cd projects/i3groove
+  cd ~/projects/i3groove
   ./install_requirements_ubuntu.sh
+  cd ~/projects/JamesLinuxDevSetup
+  ./MakeItSo.sh -v
 fi
