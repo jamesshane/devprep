@@ -28,6 +28,10 @@ if [ "$1" == "gnome" ]; then
 	sudo apt install gdm3 gnome-terminal -y
 fi
 
+if [ "$1" == "lightdm" ]; then
+	sudo apt install lightdm -y
+fi
+
 if [ "$1" == "gdmon" ]; then
 	#fix
 	echo "don't need this... it's on"
@@ -68,6 +72,7 @@ if [ "$1" == "min" ]; then
   ./devprep.sh update
   ./devprep.sh X
   ./devprep.sh i3
+  ./devprep.sh lightdm
   ./devprep.sh omz
   ./devprep.sh dev
   ./devprep.sh neofetch
