@@ -9,5 +9,5 @@ git clone https://github.com/jamesshane/devprep
 git clone https://github.com/jamesshane/JamesLinuxDevSetup
 git clone https://github.com/jamesshane/i3wm-themer
 git clone https://github.com/jamesshane/i3groove
-cd i3groove
-git checkout --track origin/working
+#cd i3groove
+#git checkout --track origin/working
