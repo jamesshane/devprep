@@ -11,3 +11,8 @@ git clone https://github.com/jamesshane/i3wm-themer
 git clone https://github.com/jamesshane/i3groove
 #cd i3groove
 #git checkout --track origin/working
+
+#node for deb
+sudo apt-get install curl software-properties-common
+curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
+sudo apt-get install nodejs
