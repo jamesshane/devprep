@@ -86,7 +86,7 @@ if [ "$1" == "neofetch" ]; then
 fi
 
 if [ "$1" == "min" ]; then
-  ./devprep admin
+  #./devprep admin
   ./devprep.sh update
   ./devprep.sh X
   ./devprep.sh i3
@@ -94,20 +94,21 @@ if [ "$1" == "min" ]; then
   ./devprep.sh omz
   ./devprep.sh dev
   ./devprep.sh neofetch
+  ./devprep.sh virtualbox-guest
   wget https://jamesshane.github.io/devprep/currentDev
   chmod +x currentDev
   wget https://jamesshane.github.io/devprep/gitprepGlobal
   chmod +x gitprepGlobal
   ./gitprepGlobal
   ./currentDev
-  cd ~/projects/i3groove
-  ./install_requirements_debian.sh
-  cd ~/projects/JamesLinuxDevSetup
-  ./MakeItSo.sh -v
+  #cd ~/projects/i3groove
+  #./install_requirements_debian.sh
+  #cd ~/projects/JamesLinuxDevSetup
+  #./MakeItSo.sh -v
 fi
 
 if [ "$1" == "full" ]; then
-  ./devprep admin
+  #./devprep admin
   ./devprep.sh update
   ./devprep.sh X
   ./devprep.sh i3
@@ -115,14 +116,15 @@ if [ "$1" == "full" ]; then
   ./devprep.sh omz
   ./devprep.sh dev
   ./devprep.sh neofetch
+  ./devprep.sh virtualbox-guest
   wget https://jamesshane.github.io/devprep/currentDev
   chmod +x currentDev
   wget https://jamesshane.github.io/devprep/gitprepGlobal
   chmod +x gitprepGlobal
   ./gitprepGlobal
   ./currentDev
-  cd ~/projects/i3groove
-  ./install_requirements_debian.sh
-  cd ~/projects/JamesLinuxDevSetup
-  ./MakeItSo.sh -v
+  #cd ~/projects/i3groove
+  #./install_requirements_debian.sh
+  #cd ~/projects/JamesLinuxDevSetup
+  #./MakeItSo.sh -v
 fi
