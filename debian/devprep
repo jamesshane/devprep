@@ -94,7 +94,7 @@ if [ "$1" == "min" ]; then
   ./devprep.sh omz
   ./devprep.sh dev
   ./devprep.sh neofetch
-  ./devprep.sh virtualbox-guest
+  #./devprep.sh virtualbox-guest
   wget https://jamesshane.github.io/devprep/currentDev
   chmod +x currentDev
   wget https://jamesshane.github.io/devprep/gitprepGlobal
@@ -116,7 +116,7 @@ if [ "$1" == "full" ]; then
   ./devprep.sh omz
   ./devprep.sh dev
   ./devprep.sh neofetch
-  ./devprep.sh virtualbox-guest
+  #./devprep.sh virtualbox-guest
   wget https://jamesshane.github.io/devprep/currentDev
   chmod +x currentDev
   wget https://jamesshane.github.io/devprep/gitprepGlobal
