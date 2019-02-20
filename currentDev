@@ -14,6 +14,8 @@ git clone https://github.com/jamesshane/formts
 git clone https://github.com/jamesshane/webpacklearn
 #cd i3groove
 #git checkout --track origin/working
+cd learnts
+git checkout --track origin/working
 
 #node for deb
 sudo apt-get install curl software-properties-common
