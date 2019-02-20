@@ -6,9 +6,12 @@ mkdir projects
 cd projects
 
 git clone https://github.com/jamesshane/devprep
-git clone https://github.com/jamesshane/JamesLinuxDevSetup
-git clone https://github.com/jamesshane/i3wm-themer
+#git clone https://github.com/jamesshane/JamesLinuxDevSetup
+#git clone https://github.com/jamesshane/i3wm-themer
 git clone https://github.com/jamesshane/i3groove
+git clone https://github.com/jamesshane/learnts
+git clone https://github.com/jamesshane/formts
+git clone https://github.com/jamesshane/webpacklearn
 #cd i3groove
 #git checkout --track origin/working
 
@@ -16,3 +19,5 @@ git clone https://github.com/jamesshane/i3groove
 sudo apt-get install curl software-properties-common
 curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
 sudo apt-get install nodejs
+cd devprep
+./gitprepGlobal
