@@ -8,14 +8,16 @@ cd projects
 git clone https://github.com/jamesshane/devprep
 #git clone https://github.com/jamesshane/JamesLinuxDevSetup
 #git clone https://github.com/jamesshane/i3wm-themer
-git clone https://github.com/jamesshane/i3groove
-git clone https://github.com/jamesshane/learnts
-git clone https://github.com/jamesshane/formts
-git clone https://github.com/jamesshane/webpacklearn
+#git clone https://github.com/jamesshane/i3groove
+#git clone https://github.com/jamesshane/learnts
+#git clone https://github.com/jamesshane/formts
+#git clone https://github.com/jamesshane/webpacklearn
+git clone https://github.com/jamesshane/13-02313
+git clone https://github.com/jamesshane/mycv
 #cd i3groove
 #git checkout --track origin/working
-cd learnts
-git checkout --track origin/working
+#cd learnts
+#git checkout --track origin/working
 
 #node for deb
 sudo apt-get install curl software-properties-common -y

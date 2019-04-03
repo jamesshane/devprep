@@ -45,6 +45,7 @@ fi
 
 if [ "$1" == "dev" ]; then
   #sudo apt install tee -y
+  sudo apt install terminator firefox-esr -y
   sudo apt install wget -y
   wget https://atom.io/download/deb
   sudo dpkg -i deb

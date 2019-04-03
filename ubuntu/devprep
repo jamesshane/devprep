@@ -47,6 +47,12 @@ fi
 
 if [ "$1" == "dev" ]; then
   #sudo apt install tee -y
+        sudo apt update
+        sudo apt install terminator firefox-esr -y
+        sudo apt install software-properties-common apt-transport-https wget
+        wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+        sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+        sudo apt install code -y
 	sudo add-apt-repository ppa:webupd8team/atom -y
 	sudo apt update -y
         sudo apt install git build-essential curl atom tmux -y
