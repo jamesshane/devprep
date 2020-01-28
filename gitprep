@@ -1,3 +1,4 @@
 #!/bin/sh
-git config user.name "James Shane"
-git config user.email "jamesshane@gmail.com"
+git config --global user.name "James Shane"
+git config --global user.email "jamesshane@gmail.com"
+git config --global credential.helper store
